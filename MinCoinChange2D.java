@@ -3,10 +3,10 @@ import java.util.*;
 
 public class MinCoinChange2D {
 	/*
-	 * dp[V][n] = 0											, n = 0
-	 * 			= Integer.MAX_VALUE							, V=0
+	 * dp[V][n] 		= 0									, V = 0
+	 * 			= Integer.MAX_VALUE							, n=0
 	 * 			= dp[V][n-1]								, V < coins[n-1]
-	 * 			= Math.min(dp[V][n-1], dp[V-coins[n-1]][n])	, else
+	 * 			= Math.min(dp[V][n-1], dp[V-coins[n-1]][n])				, else
 	 * */
 	
 	// recursion
