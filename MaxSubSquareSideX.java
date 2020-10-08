@@ -62,9 +62,8 @@ public class MaxSubSquareSideX {
 				while(minVal > maxVal) {
 					ItemSquare itemVertical = items[i-minVal+1][j];
 					ItemSquare itemHorizontal = items[i][j-minVal+1];
-					int min = Math.min(itemVertical.h, itemHorizontal.v);
-					if(min > maxVal) {
-						maxVal = min;
+					if(itemVertical.h >= minVal && itemHorizontal.v >= minVal) {
+						maxVal = minVal;
 					}
 					minVal--;
 				}
